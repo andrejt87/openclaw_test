@@ -1,59 +1,60 @@
-# 🐍 Snake Game
+# ✈️ Flight Progress
 
-A classic Snake game built with Flutter.
+GPS-basierter Flug-Fortschrittstracker für Android. Zeigt in Echtzeit den Fortschritt zum Ziel als Prozent an - funktioniert auch im Flugmodus (GPS ist passiv).
 
 ## Features
 
-- Smooth snake movement with wrap-around edges
-- Score and high score tracking
-- Touch controls (swipe) for mobile
-- Keyboard controls (Arrow keys / WASD) for desktop
-- Pause/Resume with Space or tap
-- Modern neon design
+- 📍 GPS-basierte Positionsbestimmung
+- 📊 Echtzeit-Fortschrittsanzeige in Prozent
+- 🌍 45+ Hauptstädte weltweit vorinstalliert
+- ✈️ Funktioniert im Flugmodus
+- 🎨 Modernes Dark-Theme Design
 
-## Controls
+## Städte
 
-| Input | Action |
-|-------|--------|
-| ↑ / W | Move Up |
-| ↓ / S | Move Down |
-| ← / A | Move Left |
-| → / D | Move Right |
-| Space / Tap | Start / Pause |
-| Swipe | Direction control (mobile) |
+Europa: Berlin, London, Paris, Madrid, Rom, Wien, Amsterdam, Warschau, Moskau, Stockholm, Oslo, Kopenhagen, Helsinki, Lissabon, Athen, Prag, Budapest, Zürich
 
-## Run
+Amerika: New York, Washington D.C., Los Angeles, Miami, Toronto, Mexico City, São Paulo, Buenos Aires
+
+Asien: Tokyo, Beijing, Shanghai, Hong Kong, Singapore, Bangkok, Seoul, Delhi, Mumbai, Dubai, Tel Aviv, Istanbul
+
+Afrika & Ozeanien: Cairo, Cape Town, Sydney, Melbourne, Auckland
+
+## Installation
 
 ```bash
 cd openclaw_test
-flutter run
+flutter pub get
 ```
 
-### Platforms
+## Starten
 
 ```bash
-# macOS
-flutter run -d macos
+# Android Emulator/Device
+flutter run
 
-# iOS Simulator
-flutter run -d ios
-
-# Chrome
-flutter run -d chrome
-
-# All available devices
+# Alle Geräte anzeigen
 flutter devices
 ```
 
-## Build
+## Build APK
 
 ```bash
-# macOS
-flutter build macos
-
-# iOS
-flutter build ios
-
-# Web
-flutter build web
+flutter build apk
 ```
+
+Die APK findest du dann in `build/app/outputs/flutter-apk/app-release.apk`
+
+## Verwendung
+
+1. **Ziel wählen** - Wähle deine Zielstadt aus der Dropdown-Liste
+2. **Position setzen** - Tippe "Aktuelle Position als Start" (GPS muss aktiv sein)
+3. **Tracking starten** - Tippe "Tracking starten"
+4. **Flugmodus** - Aktiviere den Flugmodus, GPS funktioniert weiterhin passiv
+5. **Beobachten** - Der Fortschritt wird automatisch aktualisiert
+
+## Hinweise
+
+- GPS funktioniert im Flugmodus, da es nur Signale empfängt (kein Senden)
+- Bei manchen Flugzeugen kann das GPS-Signal eingeschränkt sein (Fensterplatz hilft)
+- Die App benötigt Standortberechtigung
